@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import Sqaure from "./Square"
 
-
-const Board = () =>{
+const Board = (props) =>{
     const [state, setState] = useState(Array(9).fill(null));
     const [isXTurn , setXTurn] = useState(true);
     const handleClick = (index) =>{
@@ -45,10 +44,14 @@ const Board = () =>{
     const isWinner = checkWinner();
     if(isWinner){
         if(isXTurn){
-            alert("Player 2 Won!!");
+            alert(props.player2+ " Won!!");
         }
         else{
-            alert("Player 1 Won!!");
+            alert(props.player1+ " Won!!");
+        }
+        const again = confirm("Do you want to have re match ?? ");
+        if(again){
+            location.reload();
         }
     }
     const isDraw = checkDraw();

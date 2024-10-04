@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: rgb(185, 233, 245);
+  background-color: rgb(12, 109, 236);
 }
 
 .board-container{
@@ -29,4 +29,10 @@ body{
   text-align: center;
   text-decoration: underline;
   color: white;
+}
+
+.board-container h2{
+  color: white;
+  /* font-size: large; */
+  text-align: center;
 }
